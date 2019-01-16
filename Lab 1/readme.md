@@ -5,4 +5,4 @@
   * If there is a math function used in the program then
     **gcc filename.c outputfilename -lm**
   * For output 
-    **./outfilename**
+    **./outputfilename**

@@ -89,6 +89,13 @@ void delete(int x)
 	int count=0;
 
 	node *temp = head;
+	
+	if(temp == NULL) 
+	{	
+		printf("No such element present in the list\n"); 
+		
+		return ; 
+	}
 
 	if(temp->data == x) count++;
 

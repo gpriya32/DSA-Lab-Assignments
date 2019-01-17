@@ -32,8 +32,13 @@ void encodeString(){
 		if(*ch!=' ' && *ch!='\n')
 		{
 			if((i+1)%2!=0)
-		
+			{
 				*ch+=3;	
+
+				if(*ch>122)  *ch = *ch-122+96; 
+
+				if(*ch>90 && *ch<94) *ch = *ch-90+64;
+			}
 
 			if(word==NULL)
 			
@@ -117,8 +122,13 @@ void decodeString()
 			for(;i<alphaCnt;i++)
 			{
 				if((i+1)%2!=0)
-		
+				{
 					word[j]-=3;
+
+					if(word[j]<97 && word[j]> 93) word[j] = word[j]-97+123;
+
+					if(word[j]<65) word[j] = word[j]-65+91;
+				}
 
 				j++;	
 			}

@@ -46,7 +46,7 @@ void spiralMaker(int n,ll spiral[n][n],ll k)
 
 int checkPrime(ll x)
 {
-	for(ll i=2; i<=sqrt(x)+1 ;i++)
+	for(ll i=2; i<=sqrt(x) ;i++)
 	
 		if(x%i==0)
 			
@@ -78,11 +78,13 @@ int main()
 
 	spiralMaker(n,spiral,3);
 
-	f(k,1,500000)
+	f(k,1,10000000)
 	{
 		if(count==n*n) break;
 
 		if(checkPrime(6*k-1)) spiralMaker(n,spiral,6*k-1);
+		
+		if(count==n*n) break;
 		
 		if(checkPrime(6*k+1)) spiralMaker(n,spiral,6*k+1);
 

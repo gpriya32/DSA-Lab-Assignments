@@ -22,7 +22,7 @@ int main()
 
 	f(i,2,b+1) arr[i]=1;
 
-	f(i,2,sqrt(b))
+	for(ll i=2;i<=sqrt(b);i++)
 
 		if(arr[i]==1)
 
